@@ -1,0 +1,53 @@
+VERSION CONTROL SYSTEM
+
+- Un software è costituito da un insieme di file
+- I file sono creati, gestiti, modificati da persone diverse 
+- I file cambiano nel tempo
+- Per questo sono nati i sistemi di controllo di versione 
+
+ELEMENTO DELLA CONFIGURAZIONE
+
+- Un elemento della configurazione è un file mantenuto sotto controllo di versione 
+- Ha un nome e un numero di versione 
+- L'utente decide quando cambiare il numero di versione con l'operazione di *commit*
+- Si può visualizzare una qualsiasi versione passata del file 
+
+VERSIONE 
+
+- E' l'istanza di un elemento della configurazione ad un certo istante di tempo 
+- La cronologia delle versioni tiene traccia delle modifiche applicate a un elemento della configurazione 
+
+CONFIGURAZIONE
+
+- E' un insieme di elementi della configurazione correlati fra loro medianze dipendenze
+- Ogni configurazione ha un numero di versione 
+
+
+
+
+
+
+VERSION CONTROL SYSTEM CON `GIT`
+
+PROGETTO SOFTWARE 
+- costituito da numerosi files 
+- creato, gestito, modificato da uno, più spesso molti sviluppatori
+
+VERSIONAMENTO
+- consente di tenere sotto controllo i cambiamenti di un software nel suo complesso e nelle sue parti costitutive
+
+GIT
+- Creato da Linus Torvalds, lo stesso del kernel Linux 
+- Sviluppo `DISTRIBUITO`
+- Gestione dei dati a `ISTANTANEA` (snapshot)
+
+DISTRIBUITO 
+Ogni sviluppatore ha una copia locale dell'intero `REPOSITORY`, che contiene l'intera cronologia di sviluppo 
+
+MODELLO A ISTANTANEA 
+Non registra le modifiche ai file (Modello incrementale, o *a base delta*), ma crea delle `istantanee` (*snapshot*) di tutti i file in un determinato momento
+
+
+
+
+
