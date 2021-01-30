@@ -1,34 +1,48 @@
 body {
-  background-color: rgb(127, 255, 206);
-  color: #000000;
+    background-color: rgb(0, 128, 128);
+    color: #ffffff;
 }
 
 .reveal p {
-  color: #777777;
+    color: #ffffff;
 }
-.reveal ul, ol {
-  color: 000000;
+.reveal ul,
+li,
+ol {
+    color: #ffffff;
+    font-size: 120% !important;
 }
 
-.reveal h1, h2, h3, h4, h5, code {
-  font-family:'helvetica';
-  color: #777777;
-  letter-spacing: 2px;
-  text-align: left;
+.reveal h1,
+h2,
+h3,
+h4,
+h5,
+code {
+    font-family: "helvetica";
+    color: #ffffff;
+    letter-spacing: 2px;
+    text-align: left;
+}
+
+.reveal pre {
+    background-color: #000000;
+    color: #00ff00;
 }
 
 div.prompt {
-  width: 0;
-  padding: 0;
-  font-size: 0;
+    width: 0;
+    padding: 0;
+    font-size: 0;
 }
 
 div.output_area pre {
-  color: 000000;
+    color: #000000;
 }
 div.output_stderr {
-  background: #F00;
+    background: #f00;
 }
-.reveal table th, .reveal table td {
-  color: white;
+.reveal table th,
+.reveal table td {
+    color: white;
 }
