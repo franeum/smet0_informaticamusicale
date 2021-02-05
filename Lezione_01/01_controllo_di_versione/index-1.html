@@ -1,0 +1,134 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Sconosciuto </title></head><body>
+<style>
+    .reveal h1 {
+        font-size: 2em;
+    }
+
+    .reveal li {
+        font-size: 0.8em;
+    }
+
+    .reveal code {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .language-bash {
+        background-color: #000000;
+        color: #00ff00;
+    }
+</style>
+
+<h1 id="controllo-di-versione-con-git">CONTROLLO DI VERSIONE CON <code>GIT</code></h1>
+<hr/>
+<h1 id="progetto-software">PROGETTO SOFTWARE</h1>
+<ul>
+<li>costituito da numerosi files (centinaia, a volte migliaia) che cambiano nel tempo {: .fragment}</li>
+<li>creato, gestito, modificato da uno o spesso molti sviluppatori {: .fragment}</li>
+</ul>
+<hr/>
+<h1 id="sistema-di-versionamento">SISTEMA DI VERSIONAMENTO</h1>
+<ul>
+<li>
+<p>consente di tenere sotto controllo i cambiamenti di un software nel suo complesso e nelle sue parti costitutive {: .fragment}</p>
+</li>
+<li>
+<p>permette di gestire l'accesso al progetto (autenticazione, privilegi, permessi di scrittura) {: .fragment}</p>
+</li>
+</ul>
+<hr/>
+<h1 id="git">GIT</h1>
+<ul>
+<li>Creato da Linus Torvalds, lo stesso del kernel Linux {: .fragment}</li>
+<li>Modello <code>DISTRIBUITO</code> {: .fragment}</li>
+<li>Gestione dei dati a <code>ISTANTANEA</code> {: .fragment}</li>
+</ul>
+<hr/>
+<h1 id="distribuito">DISTRIBUITO</h1>
+<ul>
+<li>
+<p>Ogni sviluppatore ha una copia locale dell'intero <code>REPOSITORY</code>, che contiene tutti i files del progetto, tutte le modifiche e l'<code>albero delle relazioni</code> {: .fragment}</p>
+</li>
+<li>
+<p>La maggior parte delle operazioni avvengono nella copia locale del repository {: .fragment}</p>
+</li>
+</ul>
+<hr/>
+<h1 id="modello-a-istantanea">MODELLO A ISTANTANEA</h1>
+<ul>
+<li>Genera delle <code>istantanee</code> (<em>snapshot</em>) di tutti i file in un determinato momento {: .fragment}</li>
+<li>Gli altri sistemi salvano le modifiche ai file (Modello incrementale, o <em>a base delta</em>) {: .fragment}</li>
+</ul>
+<p>--</p>
+<h2 id="modello-incrementale">Modello incrementale</h2>
+<p><img alt="deltas.png" src="deltas-1.png"/></p>
+<p>--</p>
+<h2 id="modello-a-istantanea_1">Modello a <em>istantanea</em></h2>
+<p><img alt="istantanee.png" src="istantanee-1.png"/></p>
+<hr/>
+<h1 id="stati-di-un-file">STATI DI UN FILE</h1>
+<ul>
+<li><strong>Modificato</strong>: il file ha subito dei cambiamenti, ma non è ancora stato <em>registrato</em> {: .fragment}</li>
+<li><strong>In stage</strong>: il file, modificato, viene aggiunto aggiunto allo stage, quindi preparato per essere aggiunto alla prossima <em>istantanea</em> {: .fragment}</li>
+<li><strong>Committato</strong>: il file (insieme agli altri presenti nell'area di stage) viene salvato nel repository (database) locale. Viene di fatto salvata una nuova versione (locale) del progetto {: .fragment}</li>
+</ul>
+<hr/>
+<h1 id="aree-di-un-progetto-git">AREE DI UN PROGETTO GIT</h1>
+<ul>
+<li><strong>Directory di lavoro (<em>working dir</em>)</strong>: contiene una determinata versione del progetto (scelta attraverso un <em>checkout</em>), ossia una certa istantanea dei file su cui vogliamo lavorare {: .fragment}</li>
+<li><strong>Directory di git (<em>git dir</em>)</strong>: database che contiene tutti i dati e i metadati del progetto (storico delle versioni). Di fatto contiene tutti i <em>commit</em> {: .fragment}</li>
+<li><strong>Area di stage (<em>staging area</em>)</strong>: chiamata Indice (<em>Index</em>), contiene le informazioni relative ai cambiamenti dei file che verranno inviati al database per creare una nuova versione {: .fragment}</li>
+</ul>
+<p>--</p>
+<p><img alt="flusso.png" src="flusso-1.png"/></p>
+<hr/>
+<h1 id="installazione">INSTALLAZIONE</h1>
+<p><a href="https://git-scm.com/">https://git-scm.com/</a></p>
+<hr/>
+<h1 id="configurazione-minima">CONFIGURAZIONE MINIMA</h1>
+<p><code>bash
+git config --global user.name pippo
+git config --global user.email pippo@example.com
+git config --global core.editor vim</code></p>
+<hr/>
+<h1 id="comandi-essenziali">COMANDI ESSENZIALI</h1>
+<ul>
+<li><code>git init</code>: crea un nuovo repository locale</li>
+<li><code>git add</code>: aggiunge uno o più files all'area di staging</li>
+<li><code>git commit</code>: salva nella directory <strong>.git</strong> tutto quello che si trova nell'area di staging, creando di fatto una nuova <strong>istantanea</strong> (versione) del progetto</li>
+<li><code>git status</code>: mostra lo stato dell'area di lavoro</li>
+</ul>
+<hr/>
+<h1 id="esercitazione-1">ESERCITAZIONE 1</h1>
+<ol>
+<li>Creare un nuovo repository chiamato <code>esercitazione_1</code></li>
+<li>Creare un file di testo chiamato <code>README</code> e scrivere qualcosa al suo interno</li>
+<li>Aggiungere il file all'area di staging</li>
+<li>Eseguire il commit</li>
+</ol>
+<hr/>
+<h1 id="svolgimento">SVOLGIMENTO</h1>
+<p><code>bash
+mkdir esercitazione_1
+cd esercitazione_1
+git init
+echo -e "ciao" &gt;&gt; README
+git add README
+git status
+git commit -m "il mio primo commit"
+git status</code></p>
+<hr/>
+<h1 id="repository-remoti-su-github">REPOSITORY REMOTI SU <code>GITHUB</code></h1>
+<ul>
+<li>Creare un account su <a href="github.com">github.com</a></li>
+<li>Creare un repository su github</li>
+<li>Clonare un repository in locale con <code>git clone</code></li>
+<li>Invitare collaboratori</li>
+</ul>
+<hr/>
+<h1 id="comandi-principali">COMANDI PRINCIPALI</h1>
+<ul>
+<li><code>git push</code>: invia al repository remoto i commit creati sul repository locale</li>
+<li><code>git pull</code>: scarica nel repository locale i nuovi commit presenti sul repository remoto</li>
+</ul>
+</body></html>
