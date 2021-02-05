@@ -36,13 +36,13 @@ theme: "white"
 ---
 
 # Risolvere un problema
-- Mettere in atto una `strategia` per giungere alla soluzione del problema
-- La strategia è chiamata generalmente `algoritmo`
+- Mettere in atto una `strategia` per giungere alla soluzione del problema {: .fragment}
+- La strategia è chiamata `algoritmo` {: .fragment}
 
 ---
 
 # Algoritmo
-- Un insieme finito non ambiguo di istruzioni elementari che servono per eseguire un calcolo o per risolvere un problema. {: .fragment}
+- Un insieme `finito` e `non ambiguo` di istruzioni `elementari` che servono per eseguire un calcolo o per risolvere un problema. {: .fragment}
 
 ---
 
@@ -53,7 +53,7 @@ theme: "white"
 
 ---
 
-![problema.pdf](/problema.svg)
+![](problema.svg)
 
 ---
 
@@ -90,34 +90,61 @@ Ingredienti: sale, pasta, acqua
 
 ---
 
+# Diagramma di flusso
+
+--
+
+<img src=diagramma_flusso.png width=400 height=600 />
+
+---
+
 # Linguaggio di programmazione
 - I programmi sono sequenze di istruzioni espresse in `linguaggio macchina`, quindi stringhe binarie (0 e 1) {: .fragment}
-- Per scrivere un programma si usa un Linguaggio di programmazione che viene `tradotto` in linguaggio macchina da un compilatore {: .fragment}
+- Per scrivere un programma si usa un `Linguaggio di Programmazione` che viene `tradotto` in linguaggio macchina da un `compilatore` {: .fragment}
 - Si tratta di un `linguaggio formale`  che consente di scrivere il `codice sorgente`, che verrà convertito in linguaggio macchina {: .fragment}
 
 ---
 
 # Compilato o Interpretato
-- Un linguaggio di programmazione si dice compilato, quando viene scritto e poi compilato nella sua interezza da un compilatore, prima di essere reso eseguibile {: .fragment}
-- Un linguaggio di programmazione si dice interpretato quando viene compilato riga per riga, al momento dell'esecuzione {: .fragment}
+- Un linguaggio di programmazione si dice `compilato`, quando viene scritto e poi compilato nella sua interezza da un compilatore, prima di essere reso eseguibile {: .fragment}
+- Un linguaggio di programmazione si dice `interpretato` quando viene compilato riga per riga, al momento dell'esecuzione {: .fragment}
 
 ---
 
 # Basso o alto livello
 
-- Il livello di un Linguaggio di programmazione definisce la `distanza` del linguaggio dal linguaggio macchina
-- Più il livello è basso più il linguaggio è vicino al linguaggio macchina, quindi dipendente dall'implementazione del processore
-- I linguaggi di alto livello sono più astratti rispetto alle caratteristiche della macchina, quindi più vicini alla logica del linguaggio umano
-- La maggior parte dei linguaggi usati oggi sono ad alto livello, al limite cambia l'`altezza` del livello. `c` è più basso del `perl`
+- Il `livello` di un Linguaggio di programmazione definisce la `distanza` del linguaggio dal linguaggio macchina {: .fragment}
+- Più il livello è basso più il linguaggio è vicino al linguaggio macchina, quindi dipendente dall'implementazione del processore {: .fragment}
+- I linguaggi di alto livello sono più astratti rispetto alle caratteristiche della macchina, quindi più vicini alla logica del linguaggio umano {: .fragment}
+- La maggior parte dei linguaggi usati oggi sono ad alto livello, al limite cambia l'`altezza` del livello. `c` è più basso del `perl` {: .fragment}
 
 ---
 
 # Python: caratteristiche
-- interpretato
-- alto livello
-- free
-- multi-paradigma
-- portabile 
-- facile da imparare
-- ricco di librerie
-- molto documentato
+- interpretato {: .fragment}
+- alto livello {: .fragment}
+- free {: .fragment}
+- multi-paradigma {: .fragment}
+- portabile {: .fragment}
+- facile da imparare {: .fragment}
+- ricco di librerie {: .fragment}
+- molto documentato {: .fragment}
+
+---
+
+# Installazione
+
+[Anaconda](https://www.anaconda.com/products/individual)
+
+---
+
+# Avviare l'interprete (REPL)
+- Linux
+- Ma OSX
+- Windows
+
+---
+
+# Il primo programma
+\>>> print("Ciao Mondo!")  
+Ciao Mondo
